@@ -50,6 +50,36 @@ $("#burger").on("click", () => {
   $("#drop").show();
 });
 
+$("#questions").on("click", () => {
+  $("#help").toggle();
+  $("#profile").hide();
+  $("#bell").hide();
+});
+
+$("#me").on("click", () => {
+  $("#profile").toggle();
+  $("#help").hide();
+  $("#bell").hide();
+});
+
+$("#notify").on("click", () => {
+  $("#bell").toggle();
+  $("#help").hide();
+  $("#profile").hide();
+});
+
+$("#chat").on("click", () => {
+  $("#phone").toggle();
+  $("#help").hide();
+  $("#profile").hide();
+});
+
+$("#celly").on("click", () => {
+  $("#messages").toggle();
+  $("#help").hide();
+  $("#profile").hide();
+});
+
 const displayTime = document.querySelector(".display-time");
 // Time
 function showTime() {
