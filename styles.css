@@ -399,6 +399,11 @@ p.num {
     position: relative;
     left: 35%;
   }
+
+  html {
+    position: relative;
+    left: 2%;
+  }
 }
 
 @media only screen and (max-width: 761px) {
