@@ -66,22 +66,24 @@ $("#notify").on("click", () => {
   $("#bell").toggle();
   $("#help").hide();
   $("#profile").hide();
+  $("#chat").hide();
+  $("#celly").hide();
 });
 
 $("#chat").on("click", () => {
   $("#phone").toggle();
   $("#help").hide();
   $("#profile").hide();
-  $("#bell").toggle();
-  $("#celly").toggle();
+  $("#bell").hide();
+  $("#celly").hide();
 });
 
 $("#celly").on("click", () => {
   $("#messages").toggle();
   $("#help").hide();
   $("#profile").hide();
-  $("#bell").toggle();
-  $("#chat").toggle();
+  $("#bell").hide();
+  $("#chat").hide();
 });
 
 const displayTime = document.querySelector(".display-time");
