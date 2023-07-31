@@ -72,12 +72,16 @@ $("#chat").on("click", () => {
   $("#phone").toggle();
   $("#help").hide();
   $("#profile").hide();
+  $("#bell").toggle();
+  $("#celly").toggle();
 });
 
 $("#celly").on("click", () => {
   $("#messages").toggle();
   $("#help").hide();
   $("#profile").hide();
+  $("#bell").toggle();
+  $("#chat").toggle();
 });
 
 const displayTime = document.querySelector(".display-time");
