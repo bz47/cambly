@@ -124,6 +124,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2%;
 }
 
 .box {
@@ -379,10 +380,20 @@ p.num {
 @media only screen and (max-width: 400px) {
   .footer {
     flex-direction: column;
+    width: 100vw;
+    background-color: rgb(239, 242, 246);
   }
 
   .socials {
     margin-block: 2%;
+    width: 100%;
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+
+  .date {
+    position: relative;
+    left: 35%;
   }
 }
 

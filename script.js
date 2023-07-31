@@ -13,6 +13,7 @@ $("#toggle-on").on("click", () => {
   $("#form").toggle();
   $("#toggle").show();
   $("#toggle-on").hide();
+  $("#success").css("color", "inherit");
   $("#volume").hide();
   $("#volume-off").show();
 });
