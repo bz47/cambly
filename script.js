@@ -108,7 +108,10 @@ const displayTime = document.querySelector(".display-time");
 // Time
 function showTime() {
   let time = new Date();
-  displayTime.innerText = time.toLocaleTimeString("en-US", { hour12: true });
+  displayTime.innerText = time.toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
   setTimeout(showTime, 1000);
 }
 
