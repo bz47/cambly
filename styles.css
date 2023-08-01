@@ -483,7 +483,7 @@ body {
 }
 
 #error-left button {
-  width: 70%;
+  width: 40%;
   margin-block: 2em;
   padding: 0.5em;
   text-transform: uppercase;
@@ -491,6 +491,11 @@ body {
   border-radius: 5px;
   color: white;
   font-weight: 600;
+}
+
+#error-left button:hover {
+  cursor: pointer;
+  background-color: #1e4d5f;
 }
 
 #error-right {
