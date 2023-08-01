@@ -28,6 +28,17 @@ body {
   border-bottom: solid grey 1px;
 }
 
+#dashboard::after {
+  position: relative;
+  top: 1.7rem;
+  display: block;
+  content: "";
+  height: 3.8px;
+  width: 6.3rem;
+  background-color: rgba(235, 196, 56, 0.9);
+  z-index: 20;
+}
+
 #pt2 {
   border-bottom: solid grey 1px;
 }
