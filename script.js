@@ -41,8 +41,7 @@ $("#volume").on("click", () => {
 });
 
 $("#drop").on("click", () => {
-  $("#side-nav").show();
-  $("#drop").hide();
+  $("#side-nav").toggle();
 });
 
 $("#burger").on("click", () => {
@@ -75,11 +74,11 @@ $("#notify").on("click", () => {
 });
 
 $("#chat").on("click", () => {
-  $("#phone").toggle();
+  $("#messages").toggle();
   $("#help").hide();
   $("#profile").hide();
   $("#bell").hide();
-  $("#messages").hide();
+  $("#phone").hide();
 });
 
 $("#celly").on("click", () => {
@@ -88,6 +87,15 @@ $("#celly").on("click", () => {
   $("#profile").hide();
   $("#messages").hide();
   $("#bell").hide();
+});
+
+$("#main, #navlinks-left, #nav-logo").on("click", () => {
+  $("#phone").hide();
+  $("#help").hide();
+  $("#profile").hide();
+  $("#messages").hide();
+  $("#bell").hide();
+  $("#side-nav").toggle();
 });
 
 const displayTime = document.querySelector(".display-time");
