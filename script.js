@@ -82,7 +82,6 @@ $("#burger").on("click", () => {
   $("#messages").hide();
   $("#bell").hide();
   $("#side-nav").hide();
-  $("#drop").show();
 });
 
 $("#questions").on("click", () => {
