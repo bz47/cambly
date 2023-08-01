@@ -46,6 +46,12 @@ $("#drop").on("click", () => {
 
 $("#burger").on("click", () => {
   $("#side-nav").hide();
+  $("#phone").hide();
+  $("#help").hide();
+  $("#profile").hide();
+  $("#messages").hide();
+  $("#bell").hide();
+  $("#side-nav").hide();
   $("#drop").show();
 });
 
