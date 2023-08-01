@@ -944,6 +944,9 @@ p.num {
     left: 0.25rem;
     top: 0.25rem;
   }
+  .yellow-bar.start {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1030px) and (min-width: 761px) {
