@@ -54,20 +54,24 @@ $("#questions").on("click", () => {
   $("#help").toggle();
   $("#profile").hide();
   $("#bell").hide();
+  $("#messages").hide();
+  $("#phone").hide();
 });
 
 $("#me").on("click", () => {
   $("#profile").toggle();
   $("#help").hide();
   $("#bell").hide();
+  $("#messages").hide();
+  $("#phone").hide();
 });
 
 $("#notify").on("click", () => {
   $("#bell").toggle();
   $("#help").hide();
   $("#profile").hide();
-  $("#chat").hide();
-  $("#celly").hide();
+  $("#messages").hide();
+  $("#phone").hide();
 });
 
 $("#chat").on("click", () => {
@@ -75,15 +79,15 @@ $("#chat").on("click", () => {
   $("#help").hide();
   $("#profile").hide();
   $("#bell").hide();
-  $("#celly").hide();
+  $("#messages").hide();
 });
 
 $("#celly").on("click", () => {
-  $("#messages").toggle();
+  $("#phone").toggle();
   $("#help").hide();
   $("#profile").hide();
+  $("#messages").hide();
   $("#bell").hide();
-  $("#chat").hide();
 });
 
 const displayTime = document.querySelector(".display-time");
