@@ -262,12 +262,11 @@ body {
   height: 4rem;
   font-size: 2rem;
   font-weight: 200;
-  border: solid black 1px;
   border-radius: 50%;
   margin-bottom: 1%;
   margin-left: 1em;
   margin-top: 1rem;
-  background-color: lightgrey;
+  background-color: rgb(178, 178, 177);
 }
 .note-note {
   display: flex;
@@ -279,7 +278,7 @@ body {
 
 .note-note h5 {
   font-size: 1.1rem;
-  font-weight: 400;
+  font-weight: 530;
   margin: 0px;
   padding: 0px;
   margin-top: 1em;
@@ -287,6 +286,7 @@ body {
 
 .note-note p {
   color: rgba(116, 114, 114, 0.967);
+  margin-top: 0.2em;
 }
 
 #messages {
@@ -949,5 +949,24 @@ p.num {
 @media only screen and (max-width: 1030px) and (min-width: 761px) {
   .footer .links a {
     margin: 1%;
+  }
+}
+
+@media only screen and (max-width: 901px) and (orientation: landscape) {
+  .yellow-bar.start {
+    display: none;
+  }
+
+  #error-container {
+    margin-top: 5vh;
+  }
+
+  #error-left h3 {
+    font-size: 1.5rem;
+    margin: 0px;
+  }
+
+  #error-left p {
+    font-size: 1rem;
   }
 }
