@@ -125,13 +125,79 @@ $("#celly").on("click", () => {
   $("#bell").hide();
 });
 
-$("#main, #navlinks-left, #nav-logo").on("click", () => {
+$("#main, #navlinks-left, #nav-logo, #error404").on("click", () => {
   $("#phone").hide();
   $("#help").hide();
   $("#profile").hide();
   $("#messages").hide();
   $("#bell").hide();
   $("#side-nav").hide();
+});
+
+$("#pg2, #pg3, #pg4, #pg5, #pg6").on("click", () => {
+  $("#main").hide();
+  $("#error404").show();
+});
+
+$(" #dashboard").on("click", () => {
+  $("#main").show();
+  $("#error404").hide();
+  $(".start").show(1000);
+  $(".res").hide(1000);
+  $(".lib").hide(1000);
+  $(".his").hide(1000);
+  $(".pro").hide(1000);
+  $(".pri").hide(1000);
+});
+
+$("#go-home").on("click", () => {
+  $("#main").show();
+  $("#error404").hide();
+});
+
+$("#pg2").on("click", () => {
+  $(".pri").show(1000);
+  $(".res").hide(1000);
+  $(".lib").hide(1000);
+  $(".his").hide(1000);
+  $(".pro").hide(1000);
+  $(".start").hide(1000);
+});
+
+$("#pg3").on("click", () => {
+  $(".res").show(1000);
+  $(".pri").hide(1000);
+  $(".lib").hide(1000);
+  $(".his").hide(1000);
+  $(".pro").hide(1000);
+  $(".start").hide(1000);
+});
+
+$("#pg4").on("click", () => {
+  $(".lib").show(1000);
+  $(".pri").hide(1000);
+  $(".res").hide(1000);
+  $(".his").hide(1000);
+  $(".pro").hide(1000);
+  $(".start").hide(1000);
+});
+
+$("#pg5").on("click", () => {
+  $(".his").show(1000);
+  $(".pri").hide(1000);
+  $(".lib").hide(1000);
+  $(".res").hide(1000);
+  $(".pro").hide(1000);
+  $(".start").hide(1000);
+});
+
+$("#pg6").on("click", () => {
+  $(".pro").show(1000);
+  $(".pri").hide(1000);
+  $(".lib").hide(1000);
+  $(".his").hide(1000);
+  $(".res").hide(1000);
+  $(".start").hide(1000);
 });
 
 const displayTime = document.querySelector(".display-time");

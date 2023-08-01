@@ -28,19 +28,46 @@ body {
   border-bottom: solid grey 1px;
 }
 
-#dashboard::after {
-  position: relative;
-  top: 1.7rem;
-  display: block;
-  content: "";
-  height: 3.8px;
-  width: 6.3rem;
-  background-color: rgba(235, 196, 56, 0.9);
-  z-index: 20;
-}
-
 #pt2 {
   border-bottom: solid grey 1px;
+}
+
+.yellow-bar {
+  position: absolute;
+  display: none;
+  top: 3.7rem;
+  left: 17vw;
+  height: 0.4em;
+  width: 6.3rem;
+  background-color: rgba(235, 196, 56, 0.9);
+  z-index: 100;
+}
+
+.yellow-bar.start {
+  left: 17vw;
+  width: 7rem;
+  display: block;
+}
+
+.pri {
+  left: 25vw;
+  width: 7rem;
+}
+
+.res {
+  left: 33.8vw;
+}
+
+.lib {
+  left: 41vw;
+}
+
+.his {
+  left: 46vw;
+}
+
+.pro {
+  left: 51vw;
 }
 
 #nav {
@@ -166,6 +193,7 @@ body {
   width: 15rem;
   background-color: white;
   box-shadow: 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  z-index: 20;
 }
 
 #profile p {
@@ -206,6 +234,7 @@ body {
   box-shadow: 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
   overflow: scroll;
   padding-bottom: 0.5em;
+  z-index: 20;
 }
 
 #bell h3 {
@@ -272,6 +301,7 @@ body {
   background-color: white;
   box-shadow: 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  z-index: 20;
 }
 
 #messages-top {
@@ -394,6 +424,71 @@ body {
   box-shadow: 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
   overflow: hidden;
   z-index: 20;
+}
+
+#error404 {
+  background-color: white;
+  height: 92vh;
+  display: flex;
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+#error-container {
+  display: flex;
+  justify-content: center;
+  height: 70%;
+  width: 100%;
+}
+
+#error-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  height: 100%;
+  position: relative;
+  left: 10%;
+}
+
+#error-left h3 {
+  font-size: 3rem;
+  margin: 0px;
+}
+
+#error-left p {
+  width: 70%;
+  margin-block: 2em;
+  font-size: 1.5rem;
+}
+
+#error-left button {
+  width: 70%;
+  margin-block: 2em;
+  padding: 0.5em;
+  text-transform: uppercase;
+  background-color: #228891;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+}
+
+#error-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 30%;
+  height: 100%;
+}
+
+#error-message {
+  height: 70%;
+  width: 80%;
+  flex: none;
 }
 
 main {
@@ -768,6 +863,37 @@ p.num {
 
   #messages {
     width: 20rem;
+  }
+
+  #error-message {
+    right: 20%;
+    position: relative;
+    height: 70%;
+    width: 200%;
+  }
+
+  #error-left {
+    position: relative;
+    z-index: 10;
+  }
+
+  #error-left h3 {
+    font-size: 1.5rem;
+    margin: 0px;
+  }
+
+  #error-left p {
+    font-size: 1rem;
+  }
+
+  .yellow-bar,
+  .yellow-bar.start {
+    display: none;
+  }
+
+  #phone {
+    right: 0%;
+    width: 21rem;
   }
 }
 
