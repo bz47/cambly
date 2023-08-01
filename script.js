@@ -95,7 +95,7 @@ $("#main, #navlinks-left, #nav-logo").on("click", () => {
   $("#profile").hide();
   $("#messages").hide();
   $("#bell").hide();
-  $("#side-nav").toggle();
+  $("#side-nav").hide();
 });
 
 const displayTime = document.querySelector(".display-time");
