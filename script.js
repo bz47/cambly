@@ -135,10 +135,16 @@ $("#main, #navlinks-left, #nav-logo").on("click", () => {
 });
 
 const displayTime = document.querySelector(".display-time");
+const displayTimeSm = document.querySelector(".display-time-sm");
+
 // Time
 function showTime() {
   let time = new Date();
   displayTime.innerText = time.toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  displayTimeSm.innerText = time.toLocaleTimeString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
   });
