@@ -9,6 +9,15 @@ $("#toggle").on("click", () => {
   $("#volume").show();
 });
 
+$("#toggle-sm").on("click", () => {
+  $("#form-sm").toggle();
+  $("#toggle-on-sm").show().css("color", "#86ca95");
+  $("#toggle-sm").hide();
+  $("#success-sm").css("color", "#86ca95");
+  $("#volume-off-sm").hide();
+  $("#volume-sm").show();
+});
+
 $("#toggle-on").on("click", () => {
   $("#form").toggle();
   $("#toggle").show();
@@ -18,16 +27,37 @@ $("#toggle-on").on("click", () => {
   $("#volume-off").show();
 });
 
+$("#toggle-on-sm").on("click", () => {
+  $("#form-sm").toggle();
+  $("#toggle-sm").show();
+  $("#toggle-on-sm").hide();
+  $("#success-sm").css("color", "inherit");
+  $("#volume-sm").hide();
+  $("#volume-off-sm").show();
+});
+
 $("#expand").on("click", () => {
   $("#show-upcoming").toggle();
   $("#expand").hide();
   $("#expand-less").show();
 });
 
+$("#expand-sm").on("click", () => {
+  $("#show-upcoming-sm").toggle();
+  $("#expand-sm").hide();
+  $("#expand-less-sm").show();
+});
+
 $("#expand-less").on("click", () => {
   $("#show-upcoming").toggle();
   $("#expand-less").hide();
   $("#expand").show();
+});
+
+$("#expand-less-sm").on("click", () => {
+  $("#show-upcoming-sm").toggle();
+  $("#expand-less-sm").hide();
+  $("#expand-sm").show();
 });
 
 $("#volume-off").on("click", () => {

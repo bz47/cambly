@@ -143,9 +143,10 @@ body {
 #help p {
   display: flex;
   align-items: center;
-  padding-left: 3%;
+  padding-left: 1em;
   width: 100%;
   height: 33%;
+
   margin-block: 0%;
 }
 
@@ -161,7 +162,7 @@ body {
   position: absolute;
   right: 5%;
   top: 7.2%;
-  height: 15vh;
+  min-height: 15vh;
   width: 15rem;
   background-color: white;
   box-shadow: 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
@@ -170,7 +171,7 @@ body {
 #profile p {
   display: flex;
   align-items: center;
-  padding-left: 3%;
+  padding: 1em;
   width: 100%;
   height: 14%;
   margin-block: 1%;
@@ -203,13 +204,66 @@ body {
   width: 25rem;
   background-color: white;
   box-shadow: 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  overflow: scroll;
+  padding-bottom: 0.5em;
+}
+
+#bell h3 {
+  font-weight: 300;
+  padding-left: 1em;
+  margin-bottom: 0.2em;
+}
+
+.note-card {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  border-bottom: solid rgb(0, 0, 0, 0.5) 1px;
+}
+
+.note-card:hover {
+  background-color: rgb(211, 211, 211, 0.2);
+}
+
+#note-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12%;
+  height: 4rem;
+  font-size: 2rem;
+  font-weight: 200;
+  border: solid black 1px;
+  border-radius: 50%;
+  margin-bottom: 1%;
+  margin-left: 1em;
+  margin-top: 1rem;
+  background-color: lightgrey;
+}
+.note-note {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+  padding-left: 1em;
+}
+
+.note-note h5 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 1em;
+}
+
+.note-note p {
+  color: rgba(116, 114, 114, 0.967);
 }
 
 #messages {
   display: flex;
   display: none;
   flex-direction: column;
-  align-items: flex-start;
   position: absolute;
   right: 5%;
   top: 7.2%;
@@ -217,6 +271,113 @@ body {
   width: 25rem;
   background-color: white;
   box-shadow: 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+#messages-top {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  height: 1.5rem;
+  width: 100%;
+  border-bottom: solid grey 1px;
+  padding: 1em;
+}
+
+#messages-top button {
+  width: 30%;
+  color: rgb(217, 23, 23);
+  padding: 1%;
+  background-color: white;
+  border: none;
+}
+
+#messages-top button:hover {
+  background-color: rgb(235, 196, 56, 0.9);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#messages-mid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  top: 2rem;
+  height: 19rem;
+  width: 100%;
+  padding: 1%;
+  overflow: scroll;
+  margin-top: 1rem;
+}
+
+.messages-card {
+  width: 100%;
+  height: 5rem;
+  padding: 1%;
+  display: flex;
+}
+
+.messages-card:hover {
+  background-color: rgb(236, 235, 235);
+  cursor: pointer;
+}
+
+.mcard-pic {
+  width: 20%;
+  padding: 1%;
+}
+
+.mcard-pic img {
+  display: block;
+  height: auto;
+  width: 100%;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+.mcard-message {
+  width: 80%;
+  padding: 2%;
+}
+
+.m-row-one {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.m-row-one p {
+  margin: 0px;
+}
+
+.m-row-two {
+  width: 100%;
+  text-align: left;
+}
+
+#messages-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  height: 7%;
+  width: 100%;
+  border-top: solid grey 1px;
+  padding: 1em;
+  z-index: 15;
+  text-transform: uppercase;
+  background-color: inherit;
+}
+
+#messages-bottom:hover {
+  background-color: rgb(236, 233, 233);
+  cursor: pointer;
 }
 
 #phone {
@@ -227,10 +388,12 @@ body {
   position: absolute;
   right: 5%;
   top: 7.2%;
-  height: 30vh;
+  min-height: 30vh;
   width: 25rem;
   background-color: white;
   box-shadow: 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  z-index: 20;
 }
 
 main {
@@ -263,7 +426,22 @@ main {
   font-size: 0.8rem;
 }
 
+#timezone-sm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
 #volume {
+  position: relative;
+  right: 37%;
+  color: black;
+  font-size: 1rem;
+  display: none;
+}
+
+#volume-sm {
   position: relative;
   right: 37%;
   color: black;
@@ -278,6 +456,13 @@ main {
   font-size: 1rem;
 }
 
+#volume-off-sm {
+  position: relative;
+  right: 37%;
+  color: black;
+  font-size: 1rem;
+}
+
 #visible {
   display: flex;
   align-items: center;
@@ -285,7 +470,22 @@ main {
   border-bottom: solid 1px lightgray;
 }
 
+#visible-sm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 1px lightgray;
+  margin: -1em;
+  border-width: 60%;
+}
+
 #form {
+  display: none;
+  margin-left: 1%;
+  border-radius: 20px;
+}
+
+#form-sm {
   display: none;
   margin-left: 1%;
   border-radius: 20px;
@@ -300,7 +500,18 @@ select {
   font-size: 1rem;
 }
 
+#toggle-sm {
+  margin-inline: 1%;
+  font-size: 1rem;
+}
+
 #toggle-on {
+  display: none;
+  margin-inline: 1%;
+  font-size: 1rem;
+}
+
+#toggle-on-sm {
   display: none;
   margin-inline: 1%;
   font-size: 1rem;
@@ -314,19 +525,42 @@ select,
   cursor: pointer;
 }
 
+#toggle-sm:hover,
+#toggle-on-sm:hover,
+#volume-sm,
+#volume-off-sm {
+  cursor: pointer;
+}
+
 #incoming {
-  padding-left: 6%;
+  padding-left: 2.2rem;
+  border-bottom: solid 1px lightgray;
+}
+
+#incoming-sm {
+  padding-left: 1.5rem;
   border-bottom: solid 1px lightgray;
 }
 
 #upcoming {
   color: rgb(9, 9, 9);
   display: flex;
-  padding-inline: 4%;
+  padding-inline: 2rem;
+  justify-content: space-between;
+}
+
+#upcoming-sm {
+  color: rgb(9, 9, 9);
+  display: flex;
+  padding-inline: 1.5rem;
   justify-content: space-between;
 }
 
 #expand-less {
+  display: none;
+}
+
+#expand-less-sm {
   display: none;
 }
 
@@ -335,8 +569,22 @@ select,
   cursor: pointer;
 }
 
+#expand-sm:hover,
+#expand-less-sm:hover {
+  cursor: pointer;
+}
+
 #show-upcoming {
   display: none;
+}
+
+#show-upcoming-sm {
+  display: none;
+}
+
+#show-upcoming-sm .date {
+  position: relative;
+  left: 30%;
 }
 
 .card {
